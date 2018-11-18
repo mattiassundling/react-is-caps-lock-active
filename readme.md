@@ -1,4 +1,4 @@
-# ReactIsCapsLockActive
+# ReactIsCapsLockActive [![Build Status](https://travis-ci.org/mattiassundling/react-is-caps-lock-active.svg?branch=master)](https://travis-ci.org/mattiassundling/react-is-caps-lock-active)
 
 ReactIsCapsLockActive is a lightweight and easy to use React component that tracks whether or not Caps lock is active. A typical usecase would be to inform a user who is typing their password if Caps lock is active. The state of Caps lock is provided to the consumer as an argument by function as a child. The argument is a boolean which will be true when Caps lock is active and false when Caps lock not active.
 
