@@ -1,0 +1,65 @@
+{
+  "name": "@matsun/reactiscapslockactive",
+  "version": "1.0.0",
+  "description": "A lightweight and easy to use React component that tracks whether or not Caps lock is active",
+  "main": "dist/react-is-caps-lock-active.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattiassundling/react-is-caps-lock-active.git"
+  },
+  "author": "Mattias Sundling",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.20",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.1",
+    "gh-pages": "^2.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.67.3",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-uglify": "^6.0.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "scripts": {
+    "build:npm": "rollup -c -o dist/react-is-caps-lock-active.min.js",
+    "build:example": "webpack --mode production",
+    "clean:npm": "rimraf dist",
+    "clean:example": "rimraf examples/dist",
+    "build": "npm run clean:npm && npm run build:npm",
+    "deploy": "npm run clean:example && npm run build:example && gh-pages -d examples/dist",
+    "prepublish": "npm run build",
+    "start": "webpack-dev-server --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/mattiassundling/react-is-caps-lock-active/issues"
+  },
+  "homepage": "https://github.com/mattiassundling/react-is-caps-lock-active#readme",
+  "directories": {
+    "example": "examples"
+  },
+  "keywords": [
+    "React",
+    "caps",
+    "lock"
+  ]
+}

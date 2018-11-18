@@ -1,0 +1,102 @@
+html, body {
+  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: #333;
+}
+
+h1, p {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+p {
+  font-style: italic;
+}
+
+.mb-10 {
+  margin-bottom: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.capsLockButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 50px;
+  width: 160px;
+  padding: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+}
+
+.capsLockButtonIndicator {
+  background-color: #575757;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  transition: background-color 100ms ease-out;
+}
+
+.capsLockButtonIndicatorOn {
+  background-color: #00e500;
+}
+
+.capsLockButtonText {
+  display: flex;
+  color: #8a8a8a;
+}
+
+.githubLink {
+  opacity: 0.25;
+  transition: opacity 100ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  outline: none;
+}
+
+.githubLink:hover {
+  opacity: 1;
+  color: #333;
+}
+
+.githubLink img {
+  padding-right: 5px;
+}
+
+.githubLink span {
+  padding-left: 5px;
+}
