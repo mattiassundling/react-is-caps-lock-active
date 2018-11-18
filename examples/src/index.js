@@ -38,7 +38,7 @@ const App = () => (
       </div>
     </div>
     <div className="mb-80">
-      <p>A lightweight and easy to use React component that tracks whether Caps lock is active or not</p>
+      <p>A lightweight and easy to use React component that tracks whether or not Caps lock is active</p>
     </div>
     <a href="https://github.com/mattiassundling/react-is-caps-lock-active" className="githubLink">
       <img src={GitHubLogo} />
