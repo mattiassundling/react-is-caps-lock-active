@@ -4,7 +4,7 @@
   "description": "A lightweight and easy to use React component that tracks whether or not Caps lock is active",
   "main": "dist/react-is-caps-lock-active.min.js",
   "files": [
-    "dist/react-is-caps-lock-active.min.js",
+    "dist/react-is-caps-lock-active.min.js"
    ],
   "repository": {
     "type": "git",
