@@ -1,6 +1,7 @@
 .babelrc
 .gitignore
 examples
+rollup.config.js
 src
 yarn.lock
 webpack.config.js
