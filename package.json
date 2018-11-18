@@ -1,6 +1,6 @@
 {
   "name": "@matsun/reactiscapslockactive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight and easy to use React component that tracks whether or not Caps lock is active",
   "main": "dist/react-is-caps-lock-active.min.js",
   "files": [
@@ -13,8 +13,8 @@
   "author": "Mattias Sundling",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react": "*",
+    "react-dom": "*"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
@@ -49,7 +49,7 @@
     "clean:example": "rimraf examples/dist",
     "build": "npm run clean:npm && npm run build:npm",
     "deploy": "npm run clean:example && npm run build:example && gh-pages -d examples/dist",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "start": "webpack-dev-server --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
