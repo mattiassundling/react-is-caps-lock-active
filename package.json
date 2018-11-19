@@ -51,9 +51,8 @@
     "build:example": "webpack --mode production",
     "clean:npm": "rimraf dist",
     "clean:example": "rimraf examples/dist",
-    "build": "npm run clean:npm && npm run build:npm",
-    "deploy": "npm run clean:example && npm run build:example && gh-pages -d examples/dist",
-    "prepublishOnly": "npm run build",
+    "build": "npm run test && npm run clean:npm && npm run build:npm",
+    "deploy": "npm run test && npm run clean:example && npm run build:example && gh-pages -d examples/dist",
     "start": "webpack-dev-server --mode development",
     "test": "jest",
     "test:watch": "jest --watch"
