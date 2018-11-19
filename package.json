@@ -47,7 +47,7 @@
   },
   "scripts": {
     "build": "rimraf dist && rollup -c -o dist/react-is-caps-lock-active.min.js",
-    "build:example": "rimraf examples/dist && webpack --mode production",
+    "build:examples": "rimraf examples/dist && webpack --mode production",
     "start": "webpack-dev-server --mode development",
     "test": "jest",
     "test:watch": "jest --watch"
