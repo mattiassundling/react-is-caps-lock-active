@@ -41,4 +41,4 @@ const MyApp = () => (
 [license-badge]: https://img.shields.io/npm/l/@matsun/reactiscapslockactive.svg?style=flat-square
 [license]: https://github.com/mattiassundling/react-is-caps-lock-active/blob/master/LICENSE
 [version-badge]: https://img.shields.io/npm/v/@matsun/reactiscapslockactive.svg?style=flat-square
-[package]: https://github.com/mattiassundling/react-is-caps-lock-active
+[package]: https://www.npmjs.com/package/@matsun/reactiscapslockactive
