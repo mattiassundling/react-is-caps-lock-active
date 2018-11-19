@@ -29,7 +29,6 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.1",
-    "gh-pages": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
     "jest-dom": "^2.1.1",
@@ -47,12 +46,8 @@
     "webpack-dev-server": "^3.1.10"
   },
   "scripts": {
-    "build:npm": "rollup -c -o dist/react-is-caps-lock-active.min.js",
-    "build:example": "webpack --mode production",
-    "clean:npm": "rimraf dist",
-    "clean:example": "rimraf examples/dist",
-    "build": "npm run test && npm run clean:npm && npm run build:npm",
-    "deploy": "npm run test && npm run clean:example && npm run build:example && gh-pages -d examples/dist",
+    "build": "rimraf dist && rollup -c -o dist/react-is-caps-lock-active.min.js",
+    "build:example": "rimraf examples/dist && webpack --mode production",
     "start": "webpack-dev-server --mode development",
     "test": "jest",
     "test:watch": "jest --watch"
@@ -60,7 +55,7 @@
   "bugs": {
     "url": "https://github.com/mattiassundling/react-is-caps-lock-active/issues"
   },
-  "homepage": "https://github.com/mattiassundling/react-is-caps-lock-active#readme",
+  "homepage": "https://mattiassundling.github.io/react-is-caps-lock-active/",
   "directories": {
     "example": "examples"
   },

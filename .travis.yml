@@ -4,5 +4,13 @@ node_js:
 cache:
   directories:
     - node_modules
-script:
+scripts:
   - npm test
+  - npm run build:example
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: examples/dist
+  on:
+    branch: master
