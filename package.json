@@ -39,6 +39,7 @@
     "rollup": "^0.67.3",
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-uglify": "^6.0.0",
+    "standard-version": "^4.4.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.25.1",
@@ -48,6 +49,7 @@
   "scripts": {
     "build": "rimraf dist && rollup -c -o dist/react-is-caps-lock-active.min.js",
     "build:examples": "rimraf examples/dist && webpack --mode production",
+    "release": "standard-version",
     "start": "webpack-dev-server --mode development",
     "test": "jest",
     "test:watch": "jest --watch"
