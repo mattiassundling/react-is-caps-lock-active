@@ -1,6 +1,6 @@
 {
   "name": "@matsun/reactiscapslockactive",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A lightweight and easy to use React component that tracks whether or not Caps lock is active",
   "main": "dist/react-is-caps-lock-active.min.js",
   "files": [
