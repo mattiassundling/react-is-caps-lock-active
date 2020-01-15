@@ -1,51 +1,41 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-const EVENT_KEY_DOWN = 'keydown'
-const EVENT_KEY_UP = 'keyup'
+const EVENT_KEY_DOWN = "keydown";
+const EVENT_KEY_UP = "keyup";
 
 class ReactIsCapsLockActive extends React.Component {
   static propTypes = {
-    children: PropTypes.func.isRequired,
-  }
+    children: PropTypes.func.isRequired
+  };
 
   state = {
-    isCapsLockActive: false,
-  }
+    isCapsLockActive: false
+  };
 
   componentDidMount() {
-    document.addEventListener(EVENT_KEY_DOWN, this.wasCapsLockActivated)
-    document.addEventListener(EVENT_KEY_UP, this.wasCapsLockDeactivated)
+    document.addEventListener(EVENT_KEY_DOWN, this.handleKeyboardEvent);
+    document.addEventListener(EVENT_KEY_UP, this.handleKeyboardEvent);
   }
 
   componentWillUnmount() {
-    document.removeEventListener(EVENT_KEY_DOWN, this.wasCapsLockActivated)
-    document.removeEventListener(EVENT_KEY_UP, this.wasCapsLockDeactivated)
+    document.removeEventListener(EVENT_KEY_DOWN, this.handleKeyboardEvent);
+    document.removeEventListener(EVENT_KEY_UP, this.handleKeyboardEvent);
   }
 
-  wasCapsLockActivated = event => {
-    if (
-      event.getModifierState &&
-      event.getModifierState('CapsLock') &&
-      this.state.isCapsLockActive === false
-    ) {
-      this.setState({ isCapsLockActive: true })
-    }
-  }
+  handleKeyboardEvent = event => {
+    const { isCapsLockActive } = this.state;
 
-  wasCapsLockDeactivated = event => {
     if (
       event.getModifierState &&
-      !event.getModifierState('CapsLock') &&
-      this.state.isCapsLockActive === true
-    ) {
-      this.setState({ isCapsLockActive: false })
-    }
-  }
+      isCapsLockActive !== event.getModifierState("CapsLock")
+    )
+      this.setState({ isCapsLockActive: !isCapsLockActive });
+  };
 
   render() {
-    return this.props.children(this.state.isCapsLockActive)
+    return this.props.children(this.state.isCapsLockActive);
   }
 }
 
-export default ReactIsCapsLockActive
+export default ReactIsCapsLockActive;
